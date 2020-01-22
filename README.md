@@ -6,6 +6,7 @@ Insert the two Libs "framework" and "adapter" of SFSC into your local maven repo
 Then write into your CLI:
 - mvn install:install-file -Dfile=./libs/framework-0.1.0-SNAPSHOT.jar -DgroupId=de.unistuttgart.isw.sfsc -DartifactId=framework -Dversion=0.1.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
 - mvn install:install-file -Dfile=./libs/adapter-0.1.0-SNAPSHOT.jar -DgroupId=de.unistuttgart.isw.sfsc -DartifactId=adapter -Dversion=0.1.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
+- mvn install:install-file -Dfile=./libs/common-java-0.1.0-SNAPSHOT.jar -DgroupId=de.unistuttgart.isw.sfsc -DartifactId=common-java -Dversion=0.1.0-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
 
 To run a core instance you have two options:
 1) Use docker-compose and the compose file "core1.yml" for the examples.
