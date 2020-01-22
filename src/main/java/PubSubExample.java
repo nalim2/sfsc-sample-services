@@ -42,7 +42,7 @@ public class PubSubExample {
     public static void startSubscriber(String[] args) {
         try {
             SfscServiceApi serverSfscServiceApi = SfscServiceApiFactory.getSfscServiceApi(bootstrapConfiguration1);
-            Map<String, ByteString> pubTags = serverSfscServiceApi.getServices("Bool").stream()
+            Map<String, ByteString> pubTags = serverSfscServiceApi.getServices(ServiceName).stream()
                     //       .filter(Filters.byteStringEqualsFilter("id", uuid))
                     .findAny().orElseThrow();
 

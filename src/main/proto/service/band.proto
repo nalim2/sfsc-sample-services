@@ -12,7 +12,7 @@ message UpdateCounter {
 }
 
 message VoidCall {
-
+    string name = 1;
 }
 
 message WriteBool {

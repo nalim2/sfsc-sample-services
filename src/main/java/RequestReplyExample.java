@@ -29,7 +29,7 @@ public class RequestReplyExample {
         try {
             SfscServiceApi clientSfscServiceApi = SfscServiceApiFactory.getSfscServiceApi(bootstrapConfiguration1);
 
-            Map<String, ByteString> exampleServiceTags = clientSfscServiceApi.getServices("myServer")
+            Map<String, ByteString> exampleServiceTags = clientSfscServiceApi.getServices("isw.sfsf.readPLC")
                     .stream()
 //                    .filter(Filters.byteStringEqualsFilter("id", uuid)) // example to set a filter on attributes
                     .findAny().orElseThrow();
@@ -52,7 +52,7 @@ public class RequestReplyExample {
 
         try {
             SfscServiceApi serverSfscServiceApi = SfscServiceApiFactory.getSfscServiceApi(bootstrapConfiguration1);
-            SfscServer server = serverSfscServiceApi.server("myServer",
+            SfscServer server = serverSfscServiceApi.server("isw.sfsf.readPLC",
                     ByteString.copyFromUtf8("plc4xtype"),
                     ByteString.copyFromUtf8(UUID.randomUUID().toString()),
                     ByteString.copyFromUtf8("plc4xtype"),
