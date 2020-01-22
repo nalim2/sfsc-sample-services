@@ -26,7 +26,6 @@ public class RequestReplyExample {
     static ByteString uuid = ByteString.copyFromUtf8(UUID.randomUUID().toString());
 
     public static void StartRequester(String[] args) {
-
         try {
             SfscServiceApi clientSfscServiceApi = SfscServiceApiFactory.getSfscServiceApi(bootstrapConfiguration1);
 

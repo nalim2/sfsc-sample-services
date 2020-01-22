@@ -6,8 +6,15 @@ option java_multiple_files = true;
 message UpdateCounter {
     string value = 1;
     string name = 2;
+    bool sensor_in = 3;
+    bool sensor_out = 4;
+    bool start = 5;
 }
 
 message VoidCall {
 
+}
+
+message WriteBool {
+    bool value = 1;
 }
