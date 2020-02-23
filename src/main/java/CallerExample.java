@@ -31,7 +31,7 @@ public class CallerExample {
                         event -> {
                             if (event.getStoreEventType() == StoreEvent.StoreEventType.CREATE
                                     && Tagger.getName(event.getData()).equals("isw.sfsf.readPLC")
-                                    && Filters.byteStringEqualsFilter("id", ByteString.copyFromUtf8("MeinTestService")).test(event.getData())) {
+                                    && Filters.byteStringEqualsFilter("id", ByteString.copyFromUtf8("MeinTestService7")).test(event.getData())) {
                                 System.out.println("matching service found");
                                 cdl.countDown();
                             }
@@ -49,11 +49,11 @@ public class CallerExample {
 
             Map<String, ByteString> exampleServiceTags = clientSfscServiceApi.getServices("isw.sfsf.readPLC")
                     .stream()
-                    .filter(Filters.byteStringEqualsFilter("id", ByteString.copyFromUtf8("MeinTestService6"))) // example to set a filter on attributes
+                    .filter(Filters.byteStringEqualsFilter("id", ByteString.copyFromUtf8("MeinTestService7"))) // example to set a filter on attributes
                     .findAny().orElseThrow();
 
             SfscClient client = clientSfscServiceApi.client();
-            client.request(exampleServiceTags, VoidCall.newBuilder().setName("My Name").build(),
+            client.request(exampleServiceTags, VoidCall.newBuilder().setName("My Name").setStart(false).build(),
                     replyConsumer(), 5000, () -> System.out.println("timeout"));
 
 

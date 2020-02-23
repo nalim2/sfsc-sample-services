@@ -45,7 +45,7 @@ public class StarterApplication {
                                     .setStringRegex(RegexDefinition.VarRegex.StringRegex.newBuilder().setRegex("*").build())
                                     .build())
                             .build(),
-                    Map.of("id", ByteString.copyFromUtf8("MeinTestService6")),
+                    Map.of("id", ByteString.copyFromUtf8("MeinTestService7")),
                     replyFunction(), // Hier wird die Reply Funktion hineingegeben
                     1000,
                     100,
@@ -108,7 +108,7 @@ public class StarterApplication {
                         }
 
                         PlcWriteRequest.Builder wBuilder = plcConnection.writeRequestBuilder();
-                        wBuilder.addItem("start", "%DB4.DB0.0:BOOL", false);
+                        wBuilder.addItem("start", "%DB4.DB0.0:BOOL", request.getStart());
                         PlcWriteRequest writeRequest = wBuilder.build();
                         PlcWriteResponse writeResponse = writeRequest.execute().get();
                         //wBuilder.addItem("sens_in", "%DB4.DB0.1:BOOL");

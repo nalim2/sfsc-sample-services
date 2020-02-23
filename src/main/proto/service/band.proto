@@ -13,8 +13,20 @@ message UpdateCounter {
 
 message VoidCall {
     string name = 1;
+    bool start = 2;
 }
 
 message WriteBool {
     bool value = 1;
+}
+
+message CallPLCValue {
+    string type = 1;
+    CallPLCConnection connection = 2;
+
+
+}
+
+message CallPLCConnection {
+    string connectionString = 1;
 }

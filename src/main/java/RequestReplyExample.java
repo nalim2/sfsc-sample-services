@@ -10,7 +10,6 @@ import servicepatterns.api.SfscClient;
 import servicepatterns.api.SfscServer;
 import servicepatterns.api.SfscServiceApi;
 import servicepatterns.api.SfscServiceApiFactory;
-import servicepatterns.api.filtering.Filters;
 import servicepatterns.basepatterns.ackreqrep.AckServerResult;
 
 
