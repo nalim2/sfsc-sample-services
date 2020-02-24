@@ -3,7 +3,7 @@
 To run a core instance you have two options:
 1) Use docker-compose and the compose file "core1.yml" for the examples.
 
-Type into your CLI: docker-compose -f core1.yml up (for shut down replace "up" with "down")
+Type into your CLI: docker-compose up (for shut down replace "up" with "down"). This will use docker-compose to start an instance of the core inside of a local docker network, which will link to the external ports 1250 - 1254 and 5701.
 
 2) Assigne the Enviroment variables manually to the docker run command.
 
